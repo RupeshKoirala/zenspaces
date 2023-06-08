@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Zen Spaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="zen spaces" />
+    <meta name="keywords" content="zen spaces" />
+    <meta content="Themesdesign" name="author" />
+
+    <!-- dropdown -->
+    <link rel="dropdown" href="css/dropdown.css" />
+
+    <!-- fevicon -->
+    <link rel="icon" href="images/favicon/thefavicon.ico" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+
+    <!-- animation -->
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <!-- slider -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="css/materialdesignicons.min.css"
+      type="text/css"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+
+    <!-- colors -->
+    <link
+      href="css/colors/default.css"
+      rel="stylesheet"
+      type="text/css"
+      id="color-opt"
+    />
+
+    <!---flaticon-->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <style>
+      .faq {
+        background-color: #f2f2f2;
+        color: #333;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 16px;
+        transition: 0.4s;
+        border: 5px;
+      }
+
+      /* Style the content panel for each FAQ item */
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+    </style>
+    <script>
+      function myContactForm() {
+        event.preventDefault();
+        document.getElementById("myContactForm").style.display = "none";
+        document.getElementById("thankYouContactMessage").style.display =
+          "block";
+      }
+    </script>
+    <!-- contact form -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("tLDEqJDWYxAexMFFh");
+      })();
+    </script>
+    <script>
+        var params={
+            user_name: document.getElementById("name").value,
+            user_phone: document.getElementById("phone").value,
+            user_email: document.getElementById("email").value,
+            user_subject: document.getElementById("subject").value,
+            user_comments: document.getElementById("comments").value
+        };
+        emailjs.send("service_o49wt0r", "template_ukw9e2a", params).then(function(res){
+            console.log("Success "+res.status);
+        })
+        emailjs.send("service_o49wt0r", "template_ukw9e2a", params).then(function(res){
+            console.log("Success "+res.status);
+        })
+    </script>
+
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71">
+    <hr />
+    <!-- start contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="text-center mb-5">
+              <h3 class="heading mb-3">
+                <span class="text-primary">Contact </span>Us
+              </h3>
+              <p class="text-muted mb-0">
+                We look forward to connecting with you & hosting your property
+                on AirBnB. Please call or email us.
+              </p>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <div class="row justify-content-around g-4">
+          <div class="col-lg-6">
+            <form
+              action=""
+              method="POST"
+              onsubmit="return validateForm()"
+              class="contact-form"
+              name="myForm"
+              id="myContactForm"
+              enctype="text/plain"
+            >
+              <span id="error-msg"></span>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="position-relative mb-3">
+                    <span class="input-group-text"
+                      ><i class="mdi mdi-account-outline"></i
+                    ></span>
+                    <input
+                      name="user_name"
+                      id="name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your name*"
+                      value=""
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="position-relative mb-3">
+                    <span class="input-group-text"
+                      ><i class="fi fi-sr-phone-flip"></i
+                    ></span>
+                    <input
+                      name="user_phone"
+                      id="phone"
+                      type="phone"
+                      class="form-control"
+                      placeholder="Enter your  number*"
+                      value=""
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="position-relative mb-3">
+                    <span class="input-group-text"
+                      ><i class="mdi mdi-email-outline"></i
+                    ></span>
+                    <input
+                      name="user_email"
+                      id="email"
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter your email*"
+                      value=""
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="position-relative mb-3">
+                    <span class="input-group-text"
+                      ><i class="mdi mdi-file-document-outline"></i
+                    ></span>
+                    <input
+                      name="user_subject"
+                      id="subject"
+                      type="text"
+                      class="form-control"
+                      placeholder="Subject"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="position-relative mb-3">
+                    <span class="input-group-text align-items-start"
+                      ><i class="mdi mdi-comment-text-outline"></i
+                    ></span>
+                    <textarea
+                      name="user_comments"
+                      id="comments"
+                      rows="4"
+                      class="form-control"
+                      placeholder="Enter your message*"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <input
+                    type="submit"
+                    id="submit"
+                    name="send"
+                    class="btn btn-primary"
+                    value="Send"
+                    onclick="myContactForm(); sendMail();"
+                  />
+                </div>
+              </div>
+            </form>
+            <div
+              id="thankYouContactMessage"
+              style="display: none; text-align: center"
+            >
+              Thank you very much for submiting your details.<br />
+              Someone from our team will be in touch shortly.
+            </div>
+            <!--end form-->
+          </div>
+          <!--end col-->
+          <div class="col-lg-4">
+            <div class="contact-details mb-4 mb-lg-0">
+              <p class="mb-3">
+                <i class="mdi mdi-web align-middle text-muted fs-20 me-2"></i>
+                <span class="fw-medium"
+                  ><a href="index.html" style="color: #839393"
+                    >zenspaces.net</a
+                  ></span
+                >
+              </p>
+              <p class="mb-3">
+                <i
+                  class="mdi mdi-email-outline align-middle text-muted fs-20 me-2"
+                ></i>
+                <span class="fw-medium">info@zenspaces.net</span>
+              </p>
+              <p class="mb-3">
+                <i class="mdi mdi-phone align-middle text-muted fs-20 me-2"></i>
+                <span class="fw-medium">+1 (412) 413 - 1351</span>
+              </p>
+              <p class="mb-3">
+                <i class="mdi mdi-hospital-building text-muted fs-20 me-2"></i>
+                <span class="fw-medium">9:00 AM - 8:00 PM</span>
+              </p>
+              <p class="mb-3">
+                <i class="mdi mdi-map-marker-outline text-muted fs-20 me-2"></i>
+                <span class="fw-medium"
+                  >2319 Beechwood Blvd, Pittsburgh, PA</span
+                >
+              </p>
+            </div>
+            <!--end contact-details-->
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+    </section>
+    <div style="text-align: center">
+      <a href="index.html">
+        <button
+          type="back"
+          id="back"
+          name="back"
+          class="btn btn-primary"
+          value="back"
+        >
+          Home
+        </button>
+      </a>
+    </div>
+    <hr />
+
+    <!-- end switcher-->
+
+    <!--DropDown JS-->
+    <script src="js/dropdown.js"></script>
+
+    <!--Custom js-->
+    <script src="js/counter.js"></script>
+
+    <!--Bootstrap Js-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- animation -->
+    <script src="js/aos.js"></script>
+
+    <!-- swiper js -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- contact -->
+    <script src="js/contact.js"></script>
+
+    <!-- App Js -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zen Spaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="zen spaces" />
+    <meta name="keywords" content="zen spaces" />
+    <meta content="Themesdesign" name="author" />
+
+    <!-- dropdown -->
+    <link rel="dropdown" href="css/dropdown.css" />
+
+    <!-- fevicon -->
+    <link rel="icon" href="images/favicon/thefavicon.ico" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+
+    <!-- animation -->
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <!-- slider -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css" type="text/css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+
+    <!-- colors -->
+    <link href="css/colors/default.css" rel="stylesheet" type="text/css" id="color-opt" />
+
+    <!---flaticon-->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <style>
+        .faq {
+            background-color: #f2f2f2;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 16px;
+            transition: 0.4s;
+            border: 5px;
+        }
+
+        /* Style the content panel for each FAQ item */
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        var faqs = document.getElementsByClassName("faq");
+        var i;
+
+        for (i = 0; i < faqs.length; i++) {
+            faqs[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+        function submitRentCalcForm() {
+            event.preventDefault();
+            document.getElementById("myRentCalcForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+        }
+        function myContactForm() {
+            event.preventDefault();
+            document.getElementById("myContactForm").style.display = "none";
+            document.getElementById("thankYouContactMessage").style.display = "block";
+        }
+
+        const form = document.querySelector('form');
+        const submitButton = document.querySelector('.submitButton');
+
+        submitButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form from submitting through default browser behavior
+            form.submit(); // Submit the form programmatically
+        });
+
+
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71">
+
+    <hr />
+
+    <!-- start contact -->
+    <section class="section contact" id="rentalcontact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading mb-3">
+                            Estimated <span class="text-primary">Rental</span> Income
+                        </h3>
+                        <p class="text-muted mb-0">
+                            Fill out the below information to estimate
+                            your potential AirBnB rental income
+                        </p>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <div class="row justify-content-around g-4">
+                <div class="col-lg-6">
+                    <form action="https://formspree.io/f/xgebjrey" method="post" onsubmit="return validateForm()" class="rent-calc-form" name="myForm"
+                        id="myRentCalcForm"
+                        >
+                        <span id="error-msg"></span>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="position-relative mb-3">
+                                    <span class="input-group-text"><i class="mdi mdi-account-outline"></i></span>
+                                    <input name="name" id="name" type="text" class="form-control"
+                                        placeholder="Enter your name*" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="position-relative mb-3">
+                                    <span class="input-group-text"><i class="mdi mdi-email-outline"></i></span>
+                                    <input name="email" id="email" type="email" class="form-control"
+                                        placeholder="Enter your email*" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="position-relative mb-3">
+                                    <span class="input-group-text"><i class="fi fi-ss-address-book"></i></span>
+                                    <input name="address" id="address" type="address" class="form-control"
+                                        placeholder="Enter your Address*" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="position-relative mb-3">
+                                    <span class="input-group-text"><i class="fi fi-ss-circle-phone-flip"></i></span>
+                                    <input name="phone" id="phone" type="phone" class="form-control"
+                                        placeholder="Enter your phone number*" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="position-relative mb-3">
+                                    <span class="input-group-text"><i class="fi fi-rs-bed-alt"></i></span>
+                                    <input name="bathroom" id="bathroom" type="bathroom" class="form-control"
+                                        placeholder="Number of Rooms" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="position-relative mb-3">
+                                    <span class="input-group-text"><i class="fi fi-ts-hot-tub"></i></span>
+                                    <input name="subject" id="subject" type="text" class="form-control"
+                                        placeholder="Number of Bathrooms" required />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="position-relative mb-3">
+                                    <span class="input-group-text align-items-start"><i
+                                            class="mdi mdi-comment-text-outline"></i></span>
+                                    <textarea name="comments" id="comments" rows="4" class="form-control"
+                                        placeholder="Enter your message*" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <input type="submit" id="submit" name="send" class="btn btn-primary submitButton" value="Submit"
+                                        onclick="submitRentCalcForm()" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                    <div id="thankYouMessage" style="display: none; text-align: center;">
+                        Thank you very much for submiting your details.<br> Someone from our team will be in touch
+                        shortly.
+                    </div>
+                    <!--end form-->
+                </div>
+
+                <!--end contact-details-->
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!-- end about -->
+    <div style="text-align: center;">
+        <a href="index.html">
+        <button type="back" id="back" name="back" class="btn btn-primary" value="back">Home</button>
+        </a>
+    </div>
+    <hr />
+    
+    <!-- end switcher-->
+
+
+
+    <!--DropDown JS-->
+    <script src="js/dropdown.js"></script>
+
+    <!--Custom js-->
+    <script src="js/counter.js"></script>
+
+    <!--Bootstrap Js-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- animation -->
+    <script src="js/aos.js"></script>
+
+    <!-- swiper js -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- contact -->
+    <script src="js/contact.js"></script>
+
+    <!-- App Js -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zen Spaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zen Spaces" />
+    <meta name="keywords" content="Zen Spaces" />
+    <meta content="Themesdesign" name="author" />
+
+    <!-- dropdown -->
+    <link rel="dropdown" href="css/dropdown.css" />
+
+    <!-- fevicon -->
+    <link rel="icon" href="images/favicon/thefavicon.ico" />
+
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+
+    <!-- animation -->
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <!-- slider -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css" type="text/css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+
+    <!-- colors -->
+    <link href="css/colors/default.css" rel="stylesheet" type="text/css" id="color-opt" />
+
+    <!---flaticon-->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <style>
+        .faq {
+            background-color: #f2f2f2;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 16px;
+            transition: 0.4s;
+            border: 5px;
+        }
+
+        /* Style the content panel for each FAQ item */
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+        @media (max-width: 1000px) {
+            .margin-custom {
+            margin-top:5rem; /* Adjust the margin value as needed */
+            }
+        }
+
+        
+        @media (max-width: 576px) {
+            .margin-custom {
+            margin-top:6rem; /* Adjust the margin value as needed */
+        }
+  }
+    </style>
+    <script>
+        var faqs = document.getElementsByClassName("faq");
+        var i;
+
+        for (i = 0; i < faqs.length; i++) {
+            faqs[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+        function submitRentCalcForm() {
+            event.preventDefault();
+            document.getElementById("myRentCalcForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+        }
+        function myContactForm() {
+            event.preventDefault();
+            document.getElementById("myContactForm").style.display = "none";
+            document.getElementById("thankYouContactMessage").style.display = "block";
+        }
+
+     
+
+
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-white navbar-custom sticky" id="navbar">
+        <div class="container">
+            <!-- LOGO -->
+            <a class="navbar-brand text-uppercase" href="index.html">
+                <img class="logo-light" src="images/logo/logo.svg" alt="" height="100" />
+                <img class="logo-dark" src="images/logo/logo.svg" alt="" height="100" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu"></span>
+                <!-- toggle button -->
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto" id="navbar-navlist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#selection">Selection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#listing">Listings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faqs">FAQs</a>
+                    </li>
+                </ul>
+                <!-- Button trigger modal -->
+                <a href="contact.html" class="btn btn-primary nav-btn" target="_blank"> Contact Us </a>
+                <!-- Nav btn -->
+            </div>
+        </div>
+        <!-- End container -->
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start Home -->
+    <section class="section home home-6" id="home">
+        <div class="bg-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-5 margin-custom">
+                    <h6 class="home-title">ZEN SPACES</h6>
+                    <h1 class="fw-bold heading position-relative text-white">
+                        Experience driven <br />
+                        <i class="fi fi-ss-house-building" style="color:#ff805D"></i> Vacation Rental Management
+                    </h1>
+                    <p class="mt-5 pt-md-3 text-muted fs-6">
+                        We optimize Vacation Rentals
+                        to generate huge cash flow streams. <br />
+                        <br class="mt-5 pt-md-3 text-muted fs-6" />
+                        Curious to know how this works?
+                    </p>
+                    <div>
+                        <a class="btn btn-primary rounded-pill my-2 " href="contact.html" target="_blank">Contact Us</a>
+                        <a class="btn btn-primary rounded-pill my-2" href="calculator.html" target="_blank">Get a Quote</a>                    
+                    </div>
+                </div>
+                <!-- col end -->
+                <div class="col-lg-7">
+                    <img src="images/landingpagehouse.svg" class="home-img" alt="img" />
+                </div>
+                <!-- col end -->
+            </div>
+            <!-- row end -->
+        </div>
+        <!--end container-->
+    </section>
+    <!-- End Home -->
+
+    <!-- start about -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading">
+                            <span class="text-primary">About</span> Us
+                        </h3>
+                        <p>
+                            Zen Spaces is a rental property management company that helps
+                            investors grow their income property portfolio revenue. <br />We
+                            maximize your return by creating short, medium, and long-term
+                            listings for your property, and then fill your property with the
+                            highest yielding and professional renter.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <ul class="nav nav-tabs nav-tabs-custom nav-justified justify-content-center faq-tab-box"
+                        id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a href="#pills-genarel" class="nav-link" id="pills-genarel-tab" data-bs-toggle="pill"
+                                role="tab" aria-controls="pills-genarel" aria-selected="true">
+                                <h5 class="mb-0">History</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#pills-privacy_policy" class="nav-link active" id="pills-privacy_policy-tab"
+                                data-bs-toggle="pill" role="tab" aria-controls="pills-privacy_policy"
+                                aria-selected="false">
+                                <h5 class="mb-0">Vision</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#pills-pricing_plan" class="nav-link" id="pills-teachers-tab" data-bs-toggle="pill"
+                                role="tab" aria-controls="pills-pricing_plan" aria-selected="false">
+                                <h5 class="mb-0">Mission</h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade" id="pills-genarel" role="tabpanel"
+                            aria-labelledby="pills-genarel-tab">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="about-img">
+                                        <img src="images/about-us/history.svg" class="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4 class="about-heading">History</h4>
+                                    <p class="text-muted">
+                                        Zen Spaces was founded with a vision to revolutionize the
+                                        short-term rental industry by providing a unique
+                                        partnership model with landlords. Established with the
+                                        recognition of  growing demand
+                                        for Airbnb and other short-term rental platforms, we saw
+                                        an opportunity to help property owners maximize their
+                                        profits.
+                                    </p>
+                                    <p class="text-muted">
+                                        With years of experience in the real estate sectors, we
+                                        identified the challenges landlords faced in managing and
+                                        marketing their properties effectively. Thus, Zen Spaces
+                                        was born as a solution-driven company, offering
+                                        comprehensive services to create and optimize vacation
+                                        listings on behalf of landlords.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade active show" id="pills-privacy_policy" role="tabpanel"
+                            aria-labelledby="pills-privacy_policy-tab">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="about-img">
+                                        <img src="images/about-us/vision.svg" class="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4 class="about-heading">Vision</h4>
+                                    <p class="text-muted">
+                                        Our vision at Zen Spaces is to redefine the vacation
+                                        rental experience for both landlords and guests. We strive
+                                        to become the leading partner for landlords worldwide,
+                                        empowering them to effortlessly monetize their properties
+                                        and achieve long-term success in the short-term rental
+                                        market. We put rental properties on vacation sites like AirBNB, VRBO etc.
+                                    </p>
+                                    <p class="text-muted">
+                                        By leveraging cutting-edge technology, industry expertise,
+                                        and a customer-centric approach, we aim to create
+                                        memorable and seamless stays for guests while maximizing
+                                        the financial potential of every property.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-pricing_plan" role="tabpanel" aria-labelledby="pills-tab">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="about-img">
+                                        <img src="images/about-us/mission.svg" class="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4 class="about-heading">Mission</h4>
+                                    <p class="text-muted">
+                                        At Zen Spaces, our mission is to be the catalyst that
+                                        unlocks the full potential of your property. We are
+                                        committed to delivering exceptional results for landlords
+                                        through our innovative profit-sharing model and
+                                        comprehensive management services. By leveraging our
+                                        expertise in listing optimization, pricing strategies, and
+                                        guest communication, we aim to attract a steady stream of
+                                        high-quality guests who appreciate the unique offerings of
+                                        your property.
+                                    </p>
+                                    <p class="text-muted">
+                                        Our dedicated team of professionals is passionate about
+                                        providing impeccable customer service, ensuring that both
+                                        landlords and guests have a stress-free experience
+                                        throughout their journey with Zen Spaces. We are dedicated
+                                        to transparency, trust, and long-term partnerships, with a
+                                        focus on driving sustainable growth and delivering
+                                        outstanding value to our clients. Together, let's unlock
+                                        the full potential of your property and create
+                                        unforgettable experiences for guests.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end about -->
+    <hr />
+    <!-- start services -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading">
+                            Our <span class="text-primary">Services</span>
+                        </h3>
+                        <p>
+                            Unlock the potential of your property with our premier short-term rental management
+                            services.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="box">
+                                <div class="flex-shrink-0 my-3">
+                                    <div class="avatar-sm align-items-center">
+                                        <div class="avatar-title">
+                                            <i class="fi fi-sr-coins"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Higher Returns</h4>
+
+                                <!-- FAQ Dropdowns -->
+                                <div>
+                                    <button class="faq"><i class="fi fi-rs-angle-square-down"
+                                            style="color:#ff805D; text-align: center !important; padding-right:0.5rem"></i>Multi-Marketing</button>
+                                    <div class="panel">
+                                        <p>
+                                            We create stand-out listings for your property portfolio
+                                            across AirBnB & 20+ platforms, with expert copywriting,
+                                            professional photography and smart automations.
+                                        </p>
+                                    </div>
+
+                                    <button class="faq"><i class="fi fi-rs-angle-square-down"
+                                            style="color:#ff805D; padding-right:0.5rem"></i>Dedicated
+                                        Advisor</button>
+                                    <div class="panel">
+                                        <p>
+                                            Your dedicated advisor assists you every step of the way
+                                            with expert advice, local knowledge and in-depth
+                                            insights about the performance of your portfolio. They
+                                            will be your single point of contact.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="box">
+                                <div class="flex-shrink-0 my-3">
+                                    <div class="avatar-sm align-items-center">
+                                        <div class="avatar-title">
+                                            <i class="fi fi-bs-chat-arrow-grow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4>Dynamic Pricing</h4>
+                                <p>
+                                    Our pricing algorithms are tailored to your property.<br>They dynamically adjust
+                                    prices on a daily basis to deliver the best possible RevPAR per unit and overall
+                                    NOI.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="box">
+                                <div class="flex-shrink-0 my-3">
+                                    <div class="avatar-sm align-items-center">
+                                        <div class="avatar-title">
+                                            <i class="fi fi-ss-doctor"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Property Maintenance</h4>
+                                <button class="faq"><i class="fi fi-rs-angle-square-down"
+                                        style="color:#ff805D; padding-right:0.5rem"></i>Multi-Marketing</button>
+                                <div class="panel">
+                                    <p>
+                                        We provide regular audits of the state of your unit, including any required
+                                        maintenance.
+                                    </p>
+                                </div>
+                                <button class="faq"><i class="fi fi-rs-angle-square-down"
+                                        style="color:#ff805D; padding-right:0.5rem"></i>Checklist</button>
+                                <div class="panel">
+                                    <p><i class="fi fi-ts-badge-check" style="color:#ff805D"></i> Property Maintenance &
+                                        Repairs</p>
+                                    <p><i class="fi fi-ts-badge-check" style="color:#ff805D"></i> Insurance Solutions
+                                    </p>
+                                    <p><i class="fi fi-ts-badge-check" style="color:#ff805D"></i> Property Kept in
+                                        "For-Sale" Condition</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="box">
+                                <div class="flex-shrink-0 my-3">
+                                    <div class="avatar-sm align-items-center">
+                                        <div class="avatar-title">
+                                            <i class="fi fi-ss-circle-phone-flip"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>24/7 Support</h4>
+                                <p>
+
+                                    Remember when real people who knew what they were doing helped you when you needed
+                                    it?<br>When you call, we answer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end services -->
+
+    <hr />
+    <!-- start selection -->
+    <section class="section features" id="selection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading">
+                            Selection<span class="text-primary"> Methodology</span>
+                        </h3>
+                        <p class="text-muted mb-0">
+                            We use six step selection process to work with our clients.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row align-items-center justify-content-center g-3">
+                        <div class="col-lg-3">
+                            <div class="row mx-auto g-3">
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            <i class="fi fi-sr-sack-dollar"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">1. Revenue</h6>
+                                                    <span class="text-muted">We target homes that generate huge profits.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            <i class="fi fi-sr-filter"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">2. Filter</h6>
+                                                    <span class="text-muted">We accept just 5 in 100 homes. We don't
+                                                        want the
+                                                        most homes, just the best.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            <i class="mdi mdi-bank"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">3. Visit</h6>
+                                                    <span class="text-muted">A home visit is conducted wherein design
+                                                        and
+                                                        hospitality recommendations are made.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card features-box border-0">
+                                <div class="card-body features-body p-0">
+                                    <img src="images/selection/selection.svg" class="img-fluid features-img" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row mx-auto g-3">
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            <i class="fi fi-ss-test-tube"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">4. Test</h6>
+                                                    <span class="text-muted">We test meticulously- from the shower
+                                                        pressure to
+                                                        wifi speeds.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            <i class="fi fi-br-rocket-lunch"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">5. Launch</h6>
+                                                    <span class="text-muted">We market your home on multiple Vacation
+                                                        Rental
+                                                        Websites.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card features-box border-0">
+                                        <div class="card-body features-body">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="align-items-center">
+                                                        <div class="features-icon">
+                                                            <i class="fi fi-rs-time-twenty-four"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 align-self-center ms-3">
+                                                    <h6 class="mb-0">6. Support</h6>
+                                                    <span class="text-muted">24/7 White-Glove support for you and your
+                                                        guests.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end selection -->
+    <hr />
+    <!-- start listings -->
+    <section class="section pricing" id="listing">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading mb-3">
+                            Our <span class="text-primary">Listing</span> Locations
+                        </h3>
+                        <p class="text-muted mb-0">
+                            Checkout some of our listings with their locations.
+                        </p>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/listing/Mechanisburg.jpg" class="card-img-top" alt="Mechanisburg">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mechanisburg, PA</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/listing/Pittsburgh.jpg" class="card-img-top" alt="Pittsburgh">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pittsburgh, PA</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/listing/Tennessee.jpg" class="card-img-top" alt="Tennessee">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nashville, TN</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more col-md-4 columns for additional photos -->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/listing/Texas.jpg" class="card-img-top" alt="Texas">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dallas, TX</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/listing/Virginia.jpg" class="card-img-top" alt="Virgina">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fairfax, VA</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/listing/Wyoming.jpg" class="card-img-top" alt="Wyoming">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cheyenne, WY</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more col-md-4 columns for additional photos -->
+                        </div>
+                    </div>
+                </div>
+
+                <!--end col-->
+            </div>
+        </div>
+    </section>
+    <!-- end listings -->
+    <hr />
+    <!--start pricing-->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading mb-3">
+                            Our <span class="text-primary">Pricing </span>Plans
+                        </h3>
+                        <p class="text-muted mb-0">
+                            World-Class Rental Management at Competitive Rates
+                        </p>
+                    </div>
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <div class="pricing-box pricing-active card text-center overflow-hidden">
+                        <div class="ribbon">Popular</div>
+                        <div class="mb-3">
+                            <h6 class="text-uppercase mb-0">Premium Management</h6>
+                            <h1 class="text-primary mb-0 display-4 fw-bold">
+                                <i class="fw-normal">%</i>x<sub class="text-dark">/mo</sub>
+                            </h1>
+                        </div>
+                        <ul class="pricing-list list-unstyled mt-2 mb-0">
+                            <li class="pricing-item">
+                                Contact Us for Rates
+                            </li>
+                            <li class="pricing-item">
+                                24/7 Support Team
+                            </li>
+                            <li class="pricing-item">
+                                Listing Setup on Multiple Channels
+                            </li>
+                            <li class="pricing-item">
+                                Housekeeping & Inventory
+                            </li>
+                            <li class="pricing-item">
+                                Price Optimization
+                            </li>
+                            <li class="pricing-item">
+                                Property Maintenance
+                            </li>
+                            <li class="pricing-item">
+                                Dedicated Account Manager
+                            </li>
+                            <li class="pricing-item">
+                                Monthly Reports
+                            </li>
+
+                        </ul>
+                        <!--end pricing-list-->
+                        <div class="mt-4 pt-3">
+                            <a href="contact.html" class="btn btn-pricing w-100"
+                                style="background-color: #ff805D;">Get a Quote</a>
+                        </div>
+                    </div>
+                    <!--end pricing-box-->
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-4 col-md-6 mt-4">
+                    <div class="pricing-box card text-center border-0">
+                        <div class="mb-3">
+                            <h6 class="text-uppercase mb-0">Guaranteed Rate</h6>
+                            <h1 class="text-primary mb-0 display-4 fw-bold">
+                                <sup class="fw-normal">$</sup>X<sub class="text-dark">/mo</sub>
+                            </h1>
+                        </div>
+                        <ul class="pricing-list list-unstyled mt-2 mb-0">
+                            <li class="pricing-item">
+                                All the Benefits of Premium Management
+                            </li>
+                            <li class="pricing-item">
+                                Earn fixed amount per month
+                            </li>
+                        </ul>
+                        <!--end pricing-list-->
+                        <div class="mt-4 pt-3">
+                            <a href="contact.html" class="btn btn-pricing w-100"
+                                style="background-color: #ff805D;">Get a Quote</a>
+                        </div>
+                    </div>
+                    <!--end pricing-box-->
+                </div>
+                <!--end col-->
+            </div>
+            <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
+    <!--end pricing-->
+    <hr />
+    <section class="section pricing" id="listing">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading mb-3">
+                            Our <span class="text-primary">Featured</span> Interiors
+                        </h3>
+                        <p class="text-muted mb-0">
+                            Checkout some of our featured interior designs from our listings.
+                        </p>
+                    </div>
+                    <div class="container">
+                        <div class="row" style="padding:0.5rem 0">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/1.png" class="card-img-top" alt="Mechanisburg">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/2.png" class="card-img-top" alt="Pittsburgh">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/3.png" class="card-img-top" alt="Tennessee">
+                                </div>
+                            </div>
+                            <!-- Add more col-md-4 columns for additional photos -->
+                        </div>
+                        <div class="row" style="padding:0.5rem 0">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/4.png" class="card-img-top" alt="Mechanisburg">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/5.png" class="card-img-top" alt="Pittsburgh">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/6.png" class="card-img-top" alt="Tennessee">
+                                </div>
+                            </div>
+                            <!-- Add more col-md-4 columns for additional photos -->
+                        </div>
+                        <div class="row" style="padding:0.5rem 0">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/7.png" class="card-img-top" alt="Mechanisburg">
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/9.png" class="card-img-top" alt="Pittsburgh">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/8.png" class="card-img-top" alt="Tennessee">
+                                </div>
+                            </div>
+                            <!-- Add more col-md-4 columns for additional photos -->
+                        </div>
+                        <div class="row" style="padding:0.5rem 0">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/10.png" class="card-img-top" alt="Texas">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/11.png" class="card-img-top" alt="Virgina">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="images/interiordesign/12.png" class="card-img-top" alt="Wyoming">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--end col-->
+                </div>
+            </div>
+    </section>
+
+    <hr />
+
+
+    <!--start testimonials-->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading">
+                            <span class="text-primary">Testimonials</span>
+                        </h3>
+                        <p>
+                            Please read the reviews of our happy customers.<br>We can't wait to add you on the list.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- first item -->
+                    <div class="carousel-item active">
+                        <div class="swiper-slide client-box card" data-interval="6000">
+                            <div class="client-content card-body p-0">
+                                <div class="quote-img">
+                                    <img src="images/quote.png" alt="quote" class="img-fluid" />
+                                </div>
+                                <p class="text-dark mb-0 fs-5 lh-base">
+                                    "Zen Spaces has been an incredible partner in managing my short-term rentals. Their
+                                    attention to detail and dedication to customer satisfaction are unmatched. I've seen
+                                    a significant boost in my rental income since partnering with them. Highly
+                                    recommended!"
+                                </p>
+                            </div>
+                            <!--end client-content-->
+                            <div class="d-flex align-items-center mt-4 pt-3">
+                                <img src="images/review/review1.jpg" alt="" height="55" width="55" class="rounded-circle" />
+                                <div class="ms-2">
+                                    <h5 class="mb-0">Sarah Michalenko</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second item -->
+                    <div class="carousel-item col-lg-6">
+                        <div class="swiper-slide client-box card" data-interval="6000">
+                            <div class="client-content card-body p-0">
+                                <div class="quote-img">
+                                    <img src="images/quote.png" alt="quote" class="img-fluid" />
+                                </div>
+                                <p class="text-dark mb-0 fs-5 lh-base">
+                                    "I couldn't be happier with the services provided by Zen Spaces. They took the
+                                    hassle out of managing my Airbnb listings and have consistently delivered
+                                    exceptional results. Their expertise in maximizing occupancy and generating positive
+                                    reviews is second to none."
+                                </p>
+                            </div>
+                            <!--end client-content-->
+                            <div class="d-flex align-items-center mt-4 pt-3">
+                                <img src="images/review/review2.jpg" alt="" height="55" width="55" class="rounded-circle" />
+                                <div class="ms-2">
+                                    <h5 class="mb-0">Rob Hobbs</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third item -->
+                    <div class="carousel-item">
+                        <div class="swiper-slide client-box card" data-interval="6000">
+                            <div class="client-content card-body p-0">
+                                <div class="quote-img">
+                                    <img src="images/quote.png" alt="quote" class="img-fluid" />
+                                </div>
+                                <p class="text-dark mb-0 fs-5 lh-base">
+                                    "Zen Spaces has been a game-changer for me as a landlord. Their professional team
+                                    takes care of everything, from creating and optimizing my Airbnb listings to
+                                    providing 24/7 support for guests. I can confidently say that my properties are in
+                                    good hands with Zen Spaces.
+                                </p>
+                            </div>
+                            <!--end client-content-->
+                            <div class="d-flex align-items-center mt-4 pt-3">
+                                <img src="images/review/review3.jpg" alt="" height="55" width="55" class="rounded-circle" />
+                                <div class="ms-2">
+                                    <h5 class="mb-0">Cindy Lewis</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fourth item -->
+                    <div class="carousel-item">
+                        <div class="swiper-slide client-box card" data-interval="6000">
+                            <div class="client-content card-body p-0">
+                                <div class="quote-img">
+                                    <img src="images/quote.png" alt="quote" class="img-fluid" />
+                                </div>
+                                <p class="text-dark mb-0 fs-5 lh-base">
+                                    "I was skeptical about short-term rentals until I partnered with Zen Spaces.
+                                    They have exceeded my expectations in every aspect. Their commitment to
+                                    delivering outstanding guest experiences and driving higher returns is truly
+                                    remarkable. I'm grateful to have Zen Spaces as my trusted partner." </p>
+                            </div>
+                            <!--end client-content-->
+                            <div class="d-flex align-items-center mt-4 pt-3">
+                                <img src="images/review/review4.jpg" alt="" height="55" width="55" class="rounded-circle" />
+                                <div class="ms-2">
+                                    <h5 class="mb-0">Aspen Wilson</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fifth item -->
+                    <div class="carousel-item">
+                        <div class="swiper-slide client-box card" data-interval="6000">
+                            <div class="client-content card-body p-0">
+                                <div class="quote-img">
+                                    <img src="images/quote.png" alt="quote" class="img-fluid" />
+                                </div>
+                                <p class="text-dark mb-0 fs-5 lh-base">
+                                    "If you're looking for a reliable and trustworthy partner to manage your Airbnb, look no further than Zen Spaces. Tez Bhandari and his team are true professionals who know how to maximize rental revenue and provide a seamless experience for both hosts and guests." </p>
+                            </div>
+                            <!--end client-content-->
+                            <div class="d-flex align-items-center mt-4 pt-3">
+                                <img src="images/review/review5.jpg" alt="" height="55" width="55" class="rounded-circle" />
+                                <div class="ms-2">
+                                    <h5 class="mb-0">Andrew Brown</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- sixth item -->
+                    <div class="carousel-item">
+                        <div class="swiper-slide client-box card" data-interval="6000">
+                            <div class="client-content card-body p-0">
+                                <div class="quote-img">
+                                    <img src="images/quote.png" alt="quote" class="img-fluid" />
+                                </div>
+                                <p class="text-dark mb-0 fs-5 lh-base">
+                                    "Zen Spaces transformed our rental property into a top-notch Airbnb listing. Thanks to their expertise and dedication, we've seen a significant increase in bookings and guest satisfaction. Kudos to the entire team who supported us throughout the process!" </p>
+                            </div>
+                            <!--end client-content-->
+                            <div class="d-flex align-items-center mt-4 pt-3">
+                                <img src="images/review/review6.jpg" alt="" height="55" width="55" class="rounded-circle" />
+                                <div class="ms-2">
+                                    <h5 class="mb-0">Olivia Smithn</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- seventh item -->
+                    <div class="carousel-item">
+                        <div class="swiper-slide client-box card" data-interval="6000">
+                            <div class="client-content card-body p-0">
+                                <div class="quote-img">
+                                    <img src="images/quote.png" alt="quote" class="img-fluid" />
+                                </div>
+                                <p class="text-dark mb-0 fs-5 lh-base">
+                                    "If you're looking for a reliable and trustworthy partner to manage your Airbnb and VRBO listing, look no further than Zen Spaces. Zen Spaces team are true professionals who know how to maximize rental revenue and provide a seamless experience for both hosts and guests." </p>
+                            </div>
+                            <!--end client-content-->
+                            <div class="d-flex align-items-center mt-4 pt-3">
+                                <img src="images/review/review7.jpg" alt="" height="55" width="55" class="rounded-circle" />
+                                <div class="ms-2">
+                                    <h5 class="mb-0">Ethan Dempsey</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- side button handles -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev" style="color:#ff805D !important">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="color:#ff805D !important"></span>
+        
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next" style="color:#ff805D !important">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="color:#ff805D !important"></span>
+                   
+                    </button>
+                </div>
+                <div style="text-align: center; margin-top: 3rem">
+                    <p>Are you excited as well about your listing?</p>
+                    <a href="contact.html">
+                      <button
+                        type="back"
+                        id="back"
+                        name="back"
+                        class="btn btn-primary"
+                        value="back"
+                      >
+                        Contact Us
+                      </button>
+                    </a>
+                  </div>
+                <!--end row-->
+
+                <!--end container-->
+    </section>
+    <!--end testimonials-->
+
+
+
+
+
+
+
+    <hr />
+    <!-- start team -->
+    <section class="section team" id="team">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading mb-3">
+                            Our <span class="text-primary">Team</span>
+                        </h3>
+                        <p class="text-muted mb-0">
+                            Our focus is on Vacation Rental properties that can generate huge profits every year. 
+                            <br />Our team uses unique marketing
+                            approach to optimize average property to generate six figure
+                            cash flow stream.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="images/our-team/Seth Rouse.png" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <p>
+                                    <br /><br /><br />As an experienced short-term rental
+                                    manager in Pittsburgh, Dallas, and Hawaii, I have started my
+                                    company with the goal of helping property owners boost their
+                                    return on investment (ROI) compared to long-term rentals.
+                                    <br /><br />
+                                    I aim to increase cash flow by 2-3 times for my clients..
+                                </p>
+                            </div>
+                            <!-- <div class="s-link">
+                                <a href="#"><i class="mdi mdi-facebook"></i></a>
+                                <a href="#"><i class="mdi mdi-twitter"></i></a>
+                                <a href="#"><i class="mdi mdi-google-plus"></i></a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>Seth Rouse</h5>
+                        <span>founder &amp; ceo</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="images/our-team/tezsir.png" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <p>
+                                    <br />I ensure 5-star reviews and 24/7 support, taking the
+                                    hassle out of managing short-term rentals. <br />
+                                    <br />My goal is to make your property a top choice for
+                                    traveling professionals in the area.
+                                </p>
+                            </div>
+                            <!-- <div class="s-link">
+                                <a href="#"><i class="mdi mdi-facebook"></i></a>
+                                <a href="#"><i class="mdi mdi-twitter"></i></a>
+                                <a href="#"><i class="mdi mdi-google-plus"></i></a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>Tez Bhandari</h5>
+                        <span>Director of Customer Success</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="images/our-team/Rupesh.png" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <p>
+                                    I have many years of design and developer experience.<br /><br />
+                                    I will create a winning listing, optimize SEO, create
+                                    dynamic pricing, and do market analysis for Airbnb listing.
+                                </p>
+                            </div>
+                            <!-- <div class="s-link">
+                                <a href="#"><i class="mdi mdi-facebook"></i></a>
+                                <a href="#"><i class="mdi mdi-twitter"></i></a>
+                                <a href="#"><i class="mdi mdi-google-plus"></i></a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>Rupesh Koirala</h5>
+                        <span>Software Engineer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end team -->
+
+    <!-- end contact -->
+    <hr />
+    <section class="section" id="faqs">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading">
+                            <span class="text-primary">FAQs</span>
+                        </h3>
+                        <p>If you have any questions, please read the Frequently Asked Questions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h5 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i> How quickly can we go live?</h5>
+                                </button>
+                            </h5>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p><i class="fi fi-ss-bullet"></i>Provided we have photographs for your property and
+                                        all the relevant details required from the landlord (including but not limited
+                                        to: government ID, fully completed House Manual and listing deposit), your
+                                        listing can go live in 48 hours on AirBNB or less. <br> <br><i
+                                            class="fi fi-ss-bullet"></i>If your photography is scheduled, it can take up
+                                        to 72 hours for the photogrpaher to edit and send us the final photographs,
+                                        after which the listing will go live in 48 hours. <br><br><i
+                                            class="fi fi-ss-bullet"></i>For channels besides AirBNB, the listing can
+                                        take around 24-48 hours for approval from HomeAway and another 3-4 weeks for
+                                        Booking.com due to their independent approval process.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i>What's included in your house keeping
+                                        service?</h5>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p><i class="fi fi-ss-bullet"></i>Our fully trained housekeepers will do a full
+                                        service clean of your property, make the beds up, and replenish amenities such
+                                        as toilet rolls, shampoo, and shower gel, tea, coffee, sugar and even olive
+                                        oil.<br><br><i class="fi fi-ss-bullet"></i>Trust us, when we are done with your
+                                        home, your guests will give you a ⭐⭐⭐⭐⭐ stars rating.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i> Are there any extra charges?</h5>
+                                </button>
+                            </h5>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Additional charges a landlord may be liable for but are not limited to include:
+                                        <br>
+                                        <br><i class="fi fi-ss-bullet"></i>Any housekeeping services organised after a
+                                        landlord's stay in the flat.<br>
+                                        <i class="fi fi-ss-bullet"></i> Any maintenance works carried by our handymen
+                                        including giving access to a third party maintenance company or delivering
+                                        requested items to the property during a guest's stay.<br>
+                                        <i class="fi fi-ss-bullet"></i> Any third party maintenance company charges and
+                                        co-ordination charges.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i> What is our standard management fee?</h5>
+                                </button>
+                            </h5>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p><i class="fi fi-ss-bullet"></i>Our Management fee varies depending on the type of
+                                        property we're managing, the
+                                        revenue potential of the property as well as the volume of properties under
+                                        negotiatoin. <br><br><i class="fi fi-ss-bullet"></i>Management fees are agreed
+                                        with each host individually.
+                                        Tell us about your property and our account management team will be in cotact to
+                                        answer any quesitons you may have.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i>How to deal with guest damage to the
+                                        property?</h5>
+                                </button>
+                            </h5>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p><i class="fi fi-ss-bullet"></i>Our housekeeping team are trained to identify any
+                                        signs of obvious and substantial damage to your home, and then alert this issue
+                                        to our Account Management team. We then proceed on a case-by-case basis,
+                                        depending on the severity of the damage.<br><br><i
+                                            class="fi fi-ss-bullet"></i>However, we would always advise that hosts
+                                        should expect some light wear and tear, and encourage you to look into short
+                                        letting insurance options(we can help you with this). In addition, we asks all
+                                        our landlords to lock away items of value that you want to protect.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    </section>
+    <!-- </section> -->
+    <hr />
+    <!--Estimate Rental Income-->
+
+
+    <!-- start footer -->
+    <footer class="section bg-footer">
+        <div class="container">
+            <div class="row g-sm-4">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <img src="images/logo/logo.svg" width="100">
+                    <h6 style="color:#ff805D" class="text-uppercase fw-semibold">Zen Spaces</h6>
+                    <strong>The Premier AirBnB & VRBO Vacation Rental Management Company</strong>
+                </div>
+                <!-- End col -->
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h6 class="text-uppercase fw-semibold">Resources</h6>
+                    <ul class="list-unstyled footer-link mt-3 mb-0 fs-14">
+                        <li><a href="https://www.airbnb.com/help/all-topics?audience=home_host" target="_blank">AirBNB Help Center</a>
+                        </li>
+                        <li><a href="blog1.html" target="_blank">AirBNB Management Blog</a></li>
+                        <li><a href="blog2.html" target="_blank">Perfect AirBNB Host Blog</a></li>
+                        <li><a href="calculator.html" target="_blank">Rental Calculator</a></li>
+                        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- End col -->
+
+                <div class="col-lg-3 col-md-4 col-6 d-none d-sm-block">
+                    <h6 class="text-uppercase fw-semibold">Links</h6>
+                    <ul class="list-unstyled footer-link mt-3 mb-0 fs-14">
+                        <li><a href="#home">Home </a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services </a></li>
+                        <li><a href="#selection">Selection</a></li>
+                        <li><a href="#listing">Listings </a></li>
+
+                    </ul>
+                </div>
+                <!-- End col -->
+                <div class="col-lg-3 col-10">
+                    <h6 class="text-uppercase fw-semibold">
+                        SOCIAL MEDIA
+                        <span class="text-primary text-uppercase fs-18">Space</span>
+                    </h6>
+                    <p class="mt-md-3 pt-3 pt-md-2 fs-14">
+                        Please enter your email address to join our mailing list.
+                    </p>
+                    <div class="footer-subcribe text-end shadow-sm d-inline-block">
+                        <form action="https://formspree.io/f/xpzegkzl" method="POST">
+                            <input placeholder="Your Email Address" type="email" name="email"/>
+                            <button type="submit" class="btn btn-primary" value="Send">
+                                <i class="mdi mdi-bell-ring"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="mt-md-4 mt-3">
+                        <ul class="list-unstyled mb-0 mt-3 social-icon">
+                            <li class="list-inline-item">
+                                <div data-aos="fade-up" data-aos-duration="800">
+                                    <div class="icon-text">
+                                        <div class="icon facebook">
+                                            <span><i class="mdi mdi-facebook"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <div data-aos="fade-up" data-aos-duration="1200">
+                                    <div class="icon-text">
+                                        <div class="icon twitter">
+                                            <span><i class="mdi mdi-twitter"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <div data-aos="fade-up" data-aos-duration="1600">
+                                    <div class="icon-text">
+                                        <div class="icon instagram">
+                                            <span><i class="mdi mdi-instagram"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <div data-aos="fade-up" data-aos-duration="2000">
+                                    <div class="icon-text">
+                                        <div class="icon github">
+                                            <span><i class="mdi mdi-github"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <div data-aos="fade-up" data-aos-duration="2400">
+                                    <div class="icon-text">
+                                        <div class="icon youtube">
+                                            <span><i class="mdi mdi-youtube"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End container -->
+    </footer>
+    <!-- end footer -->
+
+    <!-- FOOTER-ALT -->
+    <div class="footer-alt pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <p class="mb-0 fs-15 text-white">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            Created with <i class="mdi mdi-heart text-danger"></i> in
+                            Pittsburgh, PA
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER-ALT -->
+
+    <!-- Style switcher -->
+    <div id="style-switcher" onclick="toggleSwitcher()" style="left: -189px">
+        <div>
+            <h6>Select your color</h6>
+            <ul class="pattern list-unstyled mb-0">
+                <li>
+                    <a class="color1" href="javascript: void(0);" onclick="setColor('default')"></a>
+                </li>
+                <li>
+                    <a class="color2" href="javascript: void(0);" onclick="setColor('success')"></a>
+                </li>
+                <li>
+                    <a class="color3" href="javascript: void(0);" onclick="setColor('warning')"></a>
+                </li>
+                <li>
+                    <a class="color4" href="javascript: void(0);" onclick="setColor('blue')"></a>
+                </li>
+                <li>
+                    <a class="color5" href="javascript: void(0);" onclick="setColor('info')"></a>
+                </li>
+                <li>
+                    <a class="color6" href="javascript: void(0);" onclick="setColor('purple')"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <a href="javascript: void(0);" class="settings rounded-end"><i class="mdi mdi-cog mdi-spin"></i></a>
+        </div>
+    </div>
+    <!-- end switcher-->
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" id="back-to-top">
+        <i class="mdi mdi-arrow-up"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--DropDown JS-->
+    <script src="js/dropdown.js"></script>
+
+    <!--Custom js-->
+    <script src="js/counter.js"></script>
+
+    <!--Bootstrap Js-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- animation -->
+    <script src="js/aos.js"></script>
+
+    <!-- swiper js -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- contact -->
+    <script src="js/contact.js"></script>
+
+    <!-- App Js -->
+    <script src="js/app.js"></script>
+
+    
+</body>
+
+</html>

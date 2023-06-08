@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Zen Spaces</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zen Spaces" />
+    <meta name="keywords" content="Zen Spaces" />
+    <meta content="Themesdesign" name="author" />
+
+    <!-- dropdown -->
+    <link rel="dropdown" href="css/dropdown.css" />
+
+    <!-- fevicon -->
+    <link rel="icon" href="images/favicon/favicon.ico" />
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+
+    <!-- animation -->
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <!-- slider -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css" type="text/css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+
+    <!-- colors -->
+    <link href="css/colors/default.css" rel="stylesheet" type="text/css" id="color-opt" />
+
+    <!---flaticon-->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <style>
+        .faq {
+            background-color: #f2f2f2;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 16px;
+            transition: 0.4s;
+            border: 5px;
+        }
+
+        /* Style the content panel for each FAQ item */
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        var faqs = document.getElementsByClassName("faq");
+        var i;
+
+        for (i = 0; i < faqs.length; i++) {
+            faqs[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+        function submitRentCalcForm() {
+            event.preventDefault();
+            document.getElementById("myRentCalcForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+        }
+        function myContactForm() {
+            event.preventDefault();
+            document.getElementById("myContactForm").style.display = "none";
+            document.getElementById("thankYouContactMessage").style.display = "block";
+        }
+
+    </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71">
+
+    <hr />
+    <!-- start about -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-12">
+                    <div class="text-center mb-5">
+                        <h3 class="heading">
+                            <span class="text-primary">Perfect AirBNB Host Blog</span>
+                        </h3>
+                        <p style="text-align: left; line-height: 2rem;">
+                            Airbnb is an extremely effective platform for getting your property booked-out during the
+                            holidays. It can be used exclusively to obtain high occupation rates and income levels.
+
+                            <br><br>The main advantage that Airbnb has over its competitors is its Host Guarantee
+                            insurance policy (although this is not strictly speaking a guarantee), which offers
+                            compensation in the event of any breakage/damage caused by guests to the property. This
+                            guarantee automatically benefits all hosts who host their property through the platform.
+
+                            <br><br>Finally, Airbnb is undoubtedly one of the most intuitive and user-friendly rental
+                            platforms, whether you are accessing it from a computer or from the Airbnb app, which
+                            enables you to manage all of your reservations from a smartphone.
+
+                            As a private landlord, it is undeniably THE platform to be on.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h5 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i> How do I sign up?</h5>
+                                </button>
+                            </h5>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p><i class="fi fi-ss-bullet"></i>Signing up to Airbnb couldn't be easier. All you
+                                        need to do is create your profile, simply describing yourself and adding your
+                                        profile picture.<br> <br><i class="fi fi-ss-bullet"></i>Make sure you have
+                                        professional photos of your property, as this will boost the click-through rates
+                                        for your ad and bookings<br><br><i class="fi fi-ss-bullet"></i>Translate your ad
+                                        into several languages so you obtain more viewings on the platform and to make
+                                        your offer more appealing. An advert in English is an absolute must these
+                                        days!<br><br><i class="fi fi-ss-bullet"></i>Define your rental conditions: we
+                                        advise you to keep them fairly strict to avoid being penalised in the event
+                                        guests cancel their booking. <br><br><i class="fi fi-ss-bullet"></i>Ensure you
+                                        list all the facilities that your accommodation has available.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i>How does AirBNB work?</h5>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>Once your ad has been created, from within "my airbnb account", the Airbnb host
+                                        space allows you to manage your ad and reservations. There are three main
+                                        elements you need to be aware of:<br><br>
+                                        <i class="fi fi-ss-bullet"></i>Availability: the Airbnb calendar enables you to
+                                        change the dates to display when your accommodation is available or booked. The
+                                        calendar also allows you to define the price per night for your
+                                        property.<br><br><i class="fi fi-ss-bullet"></i>The Airbnb email account allows
+                                        you to communicate with guests, to send them a pre-approval that they can accept
+                                        or reject, as well as enabling you to accept their reservation.<br><br><i
+                                            class="fi fi-ss-bullet"></i>The link to your ad enables you to modify the
+                                        content, conditions or even set it to "hidden".
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i>How can I optimize my listing?</h5>
+                                </button>
+                            </h5>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>A coffee machine, kettle and hairdryer have become must-haves on Airbnb. That is
+                                        to say, it is important to have the standard equipment you would expect to find
+                                        in a tourist accommodation.
+                                        <br>
+                                        <br><i class="fi fi-ss-bullet"></i>Any housekeeping services organised after a
+                                        landlord's stay in the flat.<br><br>
+                                        <i class="fi fi-ss-bullet"></i> The fact that guests have a comfortable sofa bed
+                                        to sleep on or ensuring that the accommodation doesn't have a major
+                                        defect/complexity of use will also be an additional benefit as well as being an
+                                        expectation of guests.<br>
+                                        <br><i class="fi fi-ss-bullet"></i> The fact that guests have a comfortable sofa
+                                        bed to sleep on or ensuring that the accommodation doesn't have a major
+                                        defect/complexity of use will also be an additional benefit as well as being an
+                                        expectation of guests.
+                                        <br><br> Think about the quality of your property and ensure you make it as
+                                        comfortable as possible!
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i> How can I popularize my listing?</h5>
+                                </button>
+                            </h5>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <h4>Appeal</h4>
+                                    <p>
+                                        <i class="fi fi-ss-bullet"></i>As we said, ensure you ad is appealing. The more
+                                        clicks it gets from the Airbnb search results, the more prominent it will become
+                                        to potential guests.<br><br><i class="fi fi-ss-bullet"></i>
+                                        Professional photos and carefully worded ads are essential investments
+                                        (especially in terms of time).
+                                    </p>
+                                    <h4>Reviews</h4>
+                                    <p>You can access your Airbnb reviews from your dashboard. They are essential: the more positive reviews you receive, the more bookings you will secure.<br>
+                                    <br> An Airbnb review is based on the following criteria:<br>
+                                        <i class="fi fi-ss-bullet"></i><strong>Precision:</Strong> does your ad reflect the reality of the accommodation?<br>
+                                        <i class="fi fi-ss-bullet"></i><strong>Cleanliness:</strong> is the accommodation clean?<br>
+                                        <i class="fi fi-ss-bullet"></i><strong>Communication:</strong> did you respond to your guest's questions? Are you attentive to their needs?<br>
+                                        <i class="fi fi-ss-bullet"></i><strong>Arrival:</strong> was the guest met on time? How did they rate their check-in?<br>
+                                        <i class="fi fi-ss-bullet"></i><strong>Location:</strong> is your accommodation in a good location?<br>
+                                        <i class="fi fi-ss-bullet"></i><strong>Price/quality ratio:</strong> is the booking experience fairly reflected in the price?<br>
+                                        <i class="fi fi-ss-bullet"></i>For each stay you are in fact scored on your organisation and logistics (cleanliness, check-out, communication, etc.) as well as on the accommodation itself. You need to be extremely conscientious to achieve the best possible scores.<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header" id="flush-headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
+                                    <h5 style="color:#ff805D"><i class="fi fi-br-comment-question"
+                                            style="padding-right: 0.5rem"></i>How do I become a superhost?</h5>
+                                </button>
+                            </h5>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p>True success on Airbnb is about achieving the status of Superhost. To become a Superhost you need to meet the following criteria:<br><br>
+                                        <i class="fi fi-ss-bullet"></i>Have an average score (overall evaluation) of 4.8 or more<br>
+                                        <i class="fi fi-ss-bullet"></i>Have a 90% minimum response rate, which means that you respond to your guests within 24 hours 90% of the time<br>
+                                        <i class="fi fi-ss-bullet"></i>Host at least 10 groups of guests or more per getFullYear<br>
+                                        <i class="fi fi-ss-bullet"></i>Have never cancelled a booking, except in the event of force majeure<br><br>
+                                        The advantage of being a Superhost is simply that you are identified as such on the platform and appear more frequently in search results than other adverts.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="index.html">
+                            <button type="back" id="back" name="back" class="btn btn-primary" value="back">Home
+                        </button>
+                        </a>
+
+                    </div>
+                </div>
+    </section>
+
+
+    <!-- end about -->
+    <hr />
+    <!-- end switcher-->
+
+
+
+    <!--DropDown JS-->
+    <script src="js/dropdown.js"></script>
+
+    <!--Custom js-->
+    <script src="js/counter.js"></script>
+
+    <!--Bootstrap Js-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- animation -->
+    <script src="js/aos.js"></script>
+
+    <!-- swiper js -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- contact -->
+    <script src="js/contact.js"></script>
+
+    <!-- App Js -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
