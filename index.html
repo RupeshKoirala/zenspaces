@@ -107,7 +107,11 @@
             document.getElementById("thankYouContactMessage").style.display = "block";
         }
 
-     
+        function subscribeFunc(event){
+            event.preventDefault();
+            document.getElementsByClassName("mailing-list").style.display = "block";
+            document.getElementsByClassName("email-list").style.display = "none";
+        }
 
 
     </script>
@@ -1403,21 +1407,9 @@
                 </div>
                 <!-- End col -->
                 <div class="col-lg-3 col-10">
-                    <h6 class="text-uppercase fw-semibold">
-                        SOCIAL MEDIA
-                        <span class="text-primary text-uppercase fs-18">Space</span>
+                    <h6 class="text-uppercase fw-semibold">Social medial
+                        <span class="text-primary text-uppercase fs-18">SPACE</span>
                     </h6>
-                    <p class="mt-md-3 pt-3 pt-md-2 fs-14">
-                        Please enter your email address to join our mailing list.
-                    </p>
-                    <div class="footer-subcribe text-end shadow-sm d-inline-block">
-                        <form action="https://formspree.io/f/xpzegkzl" method="POST">
-                            <input placeholder="Your Email Address" type="email" name="email"/>
-                            <button type="submit" class="btn btn-primary" value="Send">
-                                <i class="mdi mdi-bell-ring"></i>
-                            </button>
-                        </form>
-                    </div>
                     <div class="mt-md-4 mt-3">
                         <ul class="list-unstyled mb-0 mt-3 social-icon">
                             <li class="list-inline-item">

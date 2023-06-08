@@ -95,19 +95,21 @@
         }
     </script>
     <script>
-        var params = {
-            user_name: document.getElementById("name").value,
-            user_email: document.getElementById("email").value,
-            user_address: document.getElementById("address").value,
-            user_phone: document.getElementById("phone").value,
-            room: document.getElementById("room").value,
-            bathroom: document.getElementById("bathroom").value,
-            user_subject: document.getElementById("subject").value,
-            message: document.getElementById("message").value
-        };
-        emailjs.send("service_o49wt0r", "template_ukw9e2a", params).then(function (res) {
-            console.log("Success " + res.status);
-        })
+        function sendEmail(){
+            var params = {
+                user_name: document.getElementById("name").value,
+                user_email: document.getElementById("email").value,
+                user_address: document.getElementById("address").value,
+                user_phone: document.getElementById("phone").value,
+                room: document.getElementById("room").value,
+                bathroom: document.getElementById("bathroom").value,
+                user_subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value
+            };
+            emailjs.send("service_o49wt0r", "template_ukw9e2a", params).then(function (res) {
+                console.log("Success " + res.status);
+            })
+        }
     </script>
 </head>
 
@@ -199,7 +201,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <input type="submit" id="submit" name="send" class="btn btn-primary submitButton"
-                                        value="Submit" onclick="submitRentCalcForm()" />
+                                        value="Submit" onclick="submitRentCalcForm(); sendEmail()" />
                                 </div>
                             </div>
                         </div>

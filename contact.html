@@ -120,17 +120,18 @@
       })();
     </script>
     <script>
+      function sendEmail(){
         var params={
             user_name: document.getElementById("name").value,
             user_phone: document.getElementById("phone").value,
             user_email: document.getElementById("email").value,
             user_subject: document.getElementById("subject").value,
-            user_comments: document.getElementById("comments").value
+            message: document.getElementById("comments").value
         };
         emailjs.send("service_o49wt0r", "template_ukw9e2a", params).then(function(res){
             console.log("Success "+res.status);
         })
-     
+      }
     </script>
 
   </head>
@@ -253,7 +254,7 @@
                     name="send"
                     class="btn btn-primary"
                     value="Send"
-                    onclick="myContactForm(); sendMail();"
+                    onclick="myContactForm(); sendEmail();"
                   />
                 </div>
               </div>
@@ -274,7 +275,7 @@
                 <i class="mdi mdi-web align-middle text-muted fs-20 me-2"></i>
                 <span class="fw-medium"
                   ><a href="index.html" style="color: #839393"
-                    >zenspaces.net</a
+                    >www.zenspaces.net</a
                   ></span
                 >
               </p>
